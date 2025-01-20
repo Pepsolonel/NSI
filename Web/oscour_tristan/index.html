@@ -3,16 +3,39 @@
     <meta charset="utf-8">
     <title>Accueil - Oscour</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/favicon.png">
+    <link rel="icon" href="assets/favicon.ico">
+    <script src="oscour.js"></script>
 </head>
+
 <body>
-    <h1 class="center">Accueil-Oscour</h1>
+    <h1>
+        <a href="http://sante.gouv.fr">
+            <img alt="Bloc-Marianne" src="assets/Bloc_Marianne.png">
+        </a>
+        <div></div>Oscour
+    </h1>
+
     <p class="center"><em>Organisation des Secours en cas de Catastrophe pour des Opération d'Urgences Réussies</em></p>
-    <table class="borderless">
+
+    <table>
         <tr>
-            <input type="radio" name="conscience" value="true"> : conscient
-            <br>
-            <input type="radio" name="conscience" value="false"> : inconscient
+            <td>État du patient :</td>
+
+            <td>
+                <input type="radio" name="conscience" value="true" onclick="estConscient()"> conscient
+                <br>
+                <input type="radio" name="conscience" value="false" onclick="estInconscient()"> inconscient
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <span id="nom"></span>
+            </td>
+            <td>
+                <span id="nomInput"></span>
+            </td>
         </tr>
     </table>
+    <div class="big_break"></div>
 </body>
