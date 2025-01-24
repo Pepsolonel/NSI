@@ -15,16 +15,16 @@
         <div></div>Oscour
     </h1>
 
-    <p class="center"><em>Organisation des Secours en cas de Catastrophe pour des Opération d'Urgences Réussies</em></p>
+    <p class="center"><i>Organisation des Secours en cas de Catastrophe pour des Opération d'Urgences Réussies</i></p>
 
     <table>
         <tr>
             <td>État du patient :</td>
 
             <td>
-                <input type="radio" name="conscience" value="true" onclick="estConscient()"> conscient
+                <input type="radio" name="conscience" value="conscient" onclick="estConscient()"> conscient
                 <br>
-                <input type="radio" name="conscience" value="false" onclick="estInconscient()"> inconscient
+                <input type="radio" name="conscience" value="inconscient" onclick="estInconscient()"> inconscient
             </td>
         </tr>
 
@@ -32,10 +32,45 @@
             <td>
                 <span id="nom"></span>
             </td>
+
             <td>
                 <span id="nomInput"></span>
             </td>
         </tr>
+
+        <tr>
+            <td>
+                <span id="prénom"></span>
+            </td>
+
+            <td>
+                <span id="prénomInput"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <span id="naissance"></span>
+            </td>
+            
+            <td>
+                <span id="naissanceInput"></span>
+            </td>
+        </tr>
     </table>
+    <br>
+    <table>
+        <tr>
+            <td>
+                Température anormale mesurée
+                <input type="checkbox" value="true">
+            </td>
+
+            <td>
+                
+            </td>
+        </tr>
+    </table>
+    
     <div class="big_break"></div>
 </body>
