@@ -8,69 +8,111 @@
 </head>
 
 <body>
-    <h1>
-        <a href="http://sante.gouv.fr">
-            <img alt="Bloc-Marianne" src="assets/Bloc_Marianne.png">
-        </a>
-        <div></div>Oscour
-    </h1>
+    <a id="minisère">
+        <img alt="Bloc Marianne" src="assets/Bloc_Marianne.png">
+        <h2>Ministère de la santé et de l'accès au soins</h2>
+    </a>
 
     <p class="center"><i>Organisation des Secours en cas de Catastrophe pour des Opération d'Urgences Réussies</i></p>
 
-    <table>
-        <tr>
-            <td>État du patient :</td>
+    <span id="form">
+        <table>
+            <tr>
+                <td>État du patient :</td>
+                <td>
+                    <input type="radio" name="conscience" value="conscient" onclick="estConscient()"> conscient
+                    <br>
+                    <input type="radio" name="conscience" value="inconscient" onclick="estInconscient()"> inconscient
+                </td>
+            </tr>
 
-            <td>
-                <input type="radio" name="conscience" value="conscient" onclick="estConscient()"> conscient
-                <br>
-                <input type="radio" name="conscience" value="inconscient" onclick="estInconscient()"> inconscient
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    <span id="nom"></span>
+                </td>
+                <td>
+                    <span id="nomInput"></span>
+                </td>
+            </tr>
 
-        <tr>
-            <td>
-                <span id="nom"></span>
-            </td>
+            <tr>
+                <td>
+                    <span id="prénom"></span>
+                </td>
+                <td>
+                    <span id="prénomInput"></span>
+                </td>
+            </tr>
 
-            <td>
-                <span id="nomInput"></span>
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    <span id="naissance"></span>
+                </td>
+                <td>
+                    <span id="naissanceInput"></span>
+                </td>
+            </tr>
+        </table>
+        <br>
 
-        <tr>
-            <td>
-                <span id="prénom"></span>
-            </td>
+        <table>
+            <tr>
+                <td>Sexe</td>
+                <td>
+                    <input type="radio" name="sexe" value="masculin"> Masculin
+                    <br>
+                    <input type="radio" name="sexe" value="féminin"> Féminin
+                </td>
+            </tr>
+        </table>
+        <br>
 
-            <td>
-                <span id="prénomInput"></span>
-            </td>
-        </tr>
+        <table>
+            <tr>
+                <td>
+                    Température anormale mesurée (plus de 38 °C)
+                    <input id="températureAnormale" type="checkbox" onchange="température()">
+                </td>
 
-        <tr>
-            <td>
-                <span id="naissance"></span>
-            </td>
+                <td>
+                    <span id="températureInput"></span>
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <table>
+            <tr>
+                <td>
+                    Tension anormale mesurée (plus de 140 mmHg ou moins de 90 mmHg)
+                    <input id="tensionAnormale" type="checkbox" onchange="tension()">
+                </td>
+
+                <td>
+                    <span id="tensionInput"></span>
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <table>
+            <tr>
+                <td>Ventilation (renouvellement de l'air dans les poumons)</td>
+                <td>
+                    <input type="radio" name="respiration" value="spontanée"> Spontanée
+                    <br>
+                    <input type="radio" name="respiration" value="mécanique"> Mécanique
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <p>Brève description des symptômes</p>
+
+        <textarea></textarea>
             
-            <td>
-                <span id="naissanceInput"></span>
-            </td>
-        </tr>
-    </table>
-    <br>
-    <table>
-        <tr>
-            <td>
-                Température anormale mesurée
-                <input type="checkbox" value="true">
-            </td>
+        </table>
+    </span>
 
-            <td>
-                
-            </td>
-        </tr>
-    </table>
-    
     <div class="big_break"></div>
 </body>

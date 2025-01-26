@@ -4,21 +4,49 @@
 }
 
 :root{
-    --background-color: black;
-    --font-color: white;
+    color-scheme: light dark;
     --border-width: 4px;
 }
 
 body{
-    background-color: black;
-    color: var(--font-color);
+    background-color: var(--background-color);
+    color: var(--color);
     font-family: Marianne;
 }
 
+h1{
+    color: navy;
+}
+
 table{
+    width: 100%;
+    border-style: solid;
+    border-color: navy;
+}
+
+td{
+    width: 50%;
+}
+
+textarea{
+    resize: none;
     width: 100%;
 }
 
 .big_break{
     height: 2000px;
 }
+
+#ministère{
+    background-color: white;
+    color: black;
+    text-decoration-line: none;
+}
+
+#form{
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+

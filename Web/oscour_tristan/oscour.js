@@ -17,3 +17,25 @@ function estInconscient(){
     document.getElementById('naissance').innerText=null;
     document.getElementById('naissanceInput').innerHTML=null;
 }
+
+function température(){
+const températureAnormale=document.getElementById('températureAnormale')
+
+if(températureAnormale.checked){
+    document.getElementById('températureInput').innerHTML='<input type="number" value="38.5" step="0.5"> °C'
+}
+else{
+    document.getElementById('températureInput').innerHTML=null
+}
+}
+
+function tension(){
+    const températureAnormale=document.getElementById('tensionAnormale')
+    
+    if(températureAnormale.checked){
+        document.getElementById('tensionInput').innerHTML='<input type="number" value="141"> mmHg'
+    }
+    else{
+        document.getElementById('tensionInput').innerHTML=null
+    }
+    }
