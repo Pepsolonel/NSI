@@ -33,6 +33,16 @@ textarea{
     width: 100%;
 }
 
+button{
+    background-color: navy;
+    border-width: 0px;
+    font-size: 2rem;
+}
+
+button:hover{
+    background-color: royalblue;
+}
+
 .big_break{
     height: 2000px;
 }

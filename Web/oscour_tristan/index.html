@@ -99,9 +99,9 @@
             <tr>
                 <td>Ventilation (renouvellement de l'air dans les poumons)</td>
                 <td>
-                    <input type="radio" name="respiration" value="spontanée"> Spontanée
+                    <input type="radio" name="ventilation" value="spontanée"> Spontanée
                     <br>
-                    <input type="radio" name="respiration" value="mécanique"> Mécanique
+                    <input type="radio" name="ventilation" value="mécanique"> Mécanique
                 </td>
             </tr>
         </table>
@@ -109,10 +109,13 @@
 
         <p>Brève description des symptômes</p>
 
-        <textarea></textarea>
+        <textarea id="description"></textarea>
             
         </table>
+        
+        <button onclick="valider()">Valider</button>
     </span>
+    <span id="récapitulatif"></span>
 
     <div class="big_break"></div>
 </body>
