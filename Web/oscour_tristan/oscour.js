@@ -1,3 +1,24 @@
+function changeStyle(){
+    if(document.getElementById('style').checked){
+        document.getElementById('css').setAttribute("href","alternatif.css")
+    }
+    else{
+        document.getElementById('css').setAttribute("href","style.css")
+    }
+}
+
+function NuméroMédecin(){
+    numéro=document.getElementById('numéro').value;
+    numéro=Math.round(numéro)
+    if(numéro>10){
+        numéro=10;
+    }
+    if(numéro<1){
+        numéro=1;
+    }
+    document.getElementById('numéro').value=numéro;
+}
+
 function estConscient(){
     document.getElementById('nom').innerText='Nom';
     document.getElementById('nomInput').innerHTML='<input id="nomValue">';
@@ -71,8 +92,7 @@ function valider(){
     sexe=document.querySelector('input[name="sexe"]:checked').value;
     b=`<p>Sexe : ${sexe}</p>`;
 
-    températureAnormale=document.getElementById('températureAnormale');
-    if(températureAnormale.checked){
+    if(document.getElementById('températureAnormale').checked){
         température=document.getElementById('température').value;
         c=`<p>Température : ${température} °C</p>`;
     }
@@ -80,8 +100,7 @@ function valider(){
         c='';
     }
 
-    tensionAnormale=document.getElementById('tensionAnormale');
-    if(tensionAnormale.checked){
+    if(document.getElementById('tensionAnormale').checked){
         tension=document.getElementById('tension').value;
         d=`<p>Tension : ${tension} mmHg</p>`;
     }
@@ -95,7 +114,10 @@ function valider(){
     description=document.getElementById('description').value;
     f=`<p>Description : ${description}</p>`;
 
-    récapitulatif='<h2>Récapitulatif :</h2>'+a+b+c+d+e+f;
+    numéro=document.getElementById('numéroDisplay').innerText;
+    g=`<p>Numéro du médecin : ${numéro}`;
+
+    récapitulatif='<h2>Récapitulatif :</h2>'+a+b+c+d+e+f+g;
 
     document.getElementById('récapitulatif').innerHTML=récapitulatif;
 }

@@ -2,23 +2,33 @@
 <head>
     <meta charset="utf-8">
     <title>Accueil - Oscour</title>
-    <link rel="stylesheet" href="style.css">
+    <link id="css" rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/favicon.ico">
     <script src="oscour.js"></script>
 </head>
 
 <body>
-    <a id="minisère">
+    <a id="ministère" href="https://sante.gouv.fr">
         <img alt="Bloc Marianne" src="assets/Bloc_Marianne.png">
         <h2>Ministère de la santé et de l'accès au soins</h2>
     </a>
-
+    
     <p class="center"><i>Organisation des Secours en cas de Catastrophe pour des Opération d'Urgences Réussies</i></p>
 
-    <span id="form">
+    <input type="checkbox" id="style" onchange="changeStyle()"><label for="style">Style alternatif</label>
+
+    <span id="form" class="center">
         <table>
             <tr>
-                <td>État du patient :</td>
+                <th>Numéro du médecin trieur (table des chefs de service consultable <a href="#médecins">ici</a>)</th>
+                <td><input type="number" id="numéro" onchange="NuméroMédecin()" min="1" max="10" value="1"></td>
+            </tr>
+        </table>
+        <br>
+
+        <table>
+            <tr>
+                <th>État du patient</th>
                 <td>
                     <input type="radio" name="conscience" value="conscient" onclick="estConscient()"> conscient
                     <br>
@@ -27,27 +37,27 @@
             </tr>
 
             <tr>
-                <td>
+                <th>
                     <span id="nom"></span>
-                </td>
+                </th>
                 <td>
                     <span id="nomInput"></span>
                 </td>
             </tr>
 
             <tr>
-                <td>
+                <th>
                     <span id="prénom"></span>
-                </td>
+                </th>
                 <td>
                     <span id="prénomInput"></span>
                 </td>
             </tr>
 
             <tr>
-                <td>
+                <th>
                     <span id="naissance"></span>
-                </td>
+                </th>
                 <td>
                     <span id="naissanceInput"></span>
                 </td>
@@ -57,7 +67,7 @@
 
         <table>
             <tr>
-                <td>Sexe</td>
+                <th>Sexe</th>
                 <td>
                     <input type="radio" name="sexe" value="masculin"> Masculin
                     <br>
@@ -69,10 +79,10 @@
 
         <table>
             <tr>
-                <td>
+                <th>
                     Température anormale mesurée (plus de 38 °C)
                     <input id="températureAnormale" type="checkbox" onchange="température()">
-                </td>
+                </th>
 
                 <td>
                     <span id="températureInput"></span>
@@ -83,10 +93,10 @@
 
         <table>
             <tr>
-                <td>
+                <th>
                     Tension anormale mesurée (plus de 140 mmHg ou moins de 90 mmHg)
                     <input id="tensionAnormale" type="checkbox" onchange="tension()">
-                </td>
+                </th>
 
                 <td>
                     <span id="tensionInput"></span>
@@ -97,7 +107,7 @@
 
         <table>
             <tr>
-                <td>Ventilation (renouvellement de l'air dans les poumons)</td>
+                <th>Ventilation (renouvellement de l'air dans les poumons)</th>
                 <td>
                     <input type="radio" name="ventilation" value="spontanée"> Spontanée
                     <br>
@@ -107,20 +117,93 @@
         </table>
         <br>
 
-        <p>Brève description des symptômes</p>
-
-        <textarea id="description"></textarea>
-            
+        <table>
+            <tr>
+                <th>
+                    <p>Brève description des symptômes</p>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea id="description"></textarea>
+                </td>
+            </tr>
         </table>
-        
+        <br>
+
         <button onclick="valider()">Valider</button>
     </span>
     <span id="récapitulatif"></span>
 
     <div class="big_break"></div>
-    <table>
-        <tr>
-            <th>Table des médecins</th>
-        </tr>
-    </table>
+    <span id="médecins" class="center">
+        <table>
+            <tr>
+                <th>Table des chefs de services</th>
+            </tr>
+            
+            <tr>
+                <td>Dr Simpson</td>
+                <td>Traumatologie</td>
+                <td>1</td>
+            </tr>
+
+            <tr>
+                <td>Dr Flanders</td>
+                <td>Psychiatrie</td>
+                <td>2</td>
+            </tr>
+
+            <tr>
+                <td>Dr Van Houten</td>
+                <td>Réanimation</td>
+                <td>3</td>
+            </tr>
+
+            <tr>
+                <td>Dr Léonard</td>
+                <td>Quarantaine</td>
+                <td>4</td>
+            </tr>
+
+            <tr>
+                <td>Dr Riviera</td>
+                <td>Chirurgie</td>
+                <td>5</td>
+            </tr>
+
+            <tr>
+                <td>Dr Krustofski</td>
+                <td>Cardiologie</td>
+                <td>6</td>
+            </tr>
+
+            <tr>
+                <td>Dr Szyslak</td>
+                <td>Toxicologie</td>
+                <td>7</td>
+            </tr>
+
+            <tr>
+                <td>Dr Wiggum</td>
+                <td>Prélèvements</td>
+                <td>8</td>
+            </tr>
+
+            <tr>
+                <td>Dr Quimby</td>
+                <td>Urgences</td>
+                <td>9</td>
+            </tr>
+
+            <tr>
+                <td>Dr Bouvier</td>
+                <td>Neurologie</td>
+                <td>10</td>
+            </tr>
+        </table>
+        <br>
+
+        <a href="#ministère"><button>Retour</button></a>
+    </span>
 </body>
