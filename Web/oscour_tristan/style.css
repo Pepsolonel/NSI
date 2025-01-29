@@ -4,10 +4,9 @@
 }
 
 :root{
+    color-scheme: light;
     --border-width: 4px;
     --border-radius: 7px;
-    --background-color: white;
-    --color: black;
     --emphasis-color: wheat;
 }
 
@@ -34,14 +33,12 @@ td{
 
 input{
     border-style: dashed;
-    border-color: var(--color);
     border-width: 1px;
     border-radius: var(--border-radius);
 }
 
 textarea{
     border-style: dashed;
-    border-color: var(--color);
     border-width: 1px;
     border-radius: var(--border-radius);
     resize: none;
@@ -50,7 +47,6 @@ textarea{
 
 button{
     background-color: var(--emphasis-color);
-    color: var(--color);
     opacity: 50%;
     border: none;
     border-radius: var(--border-radius);
@@ -70,11 +66,6 @@ button:hover{
 
 .big_break{
     height: 2000px;
-}
-
-#ministère{
-    color: var(--color);
-    text-decoration-line: none;
 }
 
 #form{
