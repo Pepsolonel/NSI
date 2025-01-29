@@ -78,44 +78,44 @@ function valider(){
         return null;
     }
 
+    numéro=document.getElementById('numéro').value;
+    a=`<p>Numéro du médecin : ${numéro}`;
+
     conscience=document.querySelector('input[name="conscience"]:checked').value;
     if(conscience=='conscient'){
         nom=document.getElementById('nomValue').value;
         prénom=document.getElementById('prénomValue').value;
         date=document.getElementById('naissanceValue').value;
-        a=`<p>État du patient : ${conscience}</p><p>Nom : ${nom}</p><p>Prénom : ${prénom}</p><p>Date : ${date}</p>`;
+        b=`<p>État du patient : ${conscience}</p><p>Nom : ${nom}</p><p>Prénom : ${prénom}</p><p>Date : ${date}</p>`;
     }
     else{
-        a=`<p>État du patient : ${conscience}</p>`;
+        b=`<p>État du patient : ${conscience}</p>`;
     }
 
     sexe=document.querySelector('input[name="sexe"]:checked').value;
-    b=`<p>Sexe : ${sexe}</p>`;
+    c=`<p>Sexe : ${sexe}</p>`;
 
     if(document.getElementById('températureAnormale').checked){
         température=document.getElementById('température').value;
-        c=`<p>Température : ${température} °C</p>`;
-    }
-    else{
-        c='';
-    }
-
-    if(document.getElementById('tensionAnormale').checked){
-        tension=document.getElementById('tension').value;
-        d=`<p>Tension : ${tension} mmHg</p>`;
+        d=`<p>Température : ${température} °C</p>`;
     }
     else{
         d='';
     }
 
+    if(document.getElementById('tensionAnormale').checked){
+        tension=document.getElementById('tension').value;
+        e=`<p>Tension : ${tension} mmHg</p>`;
+    }
+    else{
+        e='';
+    }
+
     ventilation=document.querySelector('input[name="ventilation"]:checked').value;
-    e=`<p>Ventilation : ${ventilation}</p>`;
+    f=`<p>Ventilation : ${ventilation}</p>`;
 
     description=document.getElementById('description').value;
-    f=`<p>Description : ${description}</p>`;
-
-    numéro=document.getElementById('numéroDisplay').innerText;
-    g=`<p>Numéro du médecin : ${numéro}`;
+    g=`<p>Description : ${description}</p>`;
 
     récapitulatif='<h2>Récapitulatif :</h2>'+a+b+c+d+e+f+g;
 
