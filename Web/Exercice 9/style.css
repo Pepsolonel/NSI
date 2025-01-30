@@ -1,0 +1,48 @@
+figure{
+    width: fit-content;
+    border-style: solid;
+    padding: 1px;
+}
+
+figcaption{
+    text-align: center;
+}
+
+table{
+    border-style: outset;
+    border-radius: 1px;
+    border-color: black;
+}
+
+th, td{
+    border-style: outset;
+    border-color: black;
+}
+
+.Nom{
+    background-color: gray;
+}
+
+#Rouge{
+    background-color: red;
+}
+
+#Vert{
+    background-color: green;
+}
+
+#Bleu{
+    background-color: blue;
+}
+
+#Jaune{
+    background-color: yellow;
+}
+
+#Cyan{
+    background-color: cyan;
+}
+
+#Magenta{
+    background-color: magenta;
+}
