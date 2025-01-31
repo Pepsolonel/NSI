@@ -4,6 +4,7 @@
 }
 
 :root{
+    font-family: Marianne;
     color-scheme: light;
     --border-width: 4px;
     --border-radius: 7px;
@@ -13,7 +14,6 @@
 body{
     background-color: var(--background-color);
     color: var(--color);
-    font-family: Marianne;
 }
 
 h1{
@@ -56,6 +56,7 @@ button{
 button:hover{
     opacity: 100%;
     transition: 0.5s;
+    box-shadow: 0px 0px 10px;
 }
 
 .center{
