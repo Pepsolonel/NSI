@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TP 2</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<style>
+		.visible{ display : inline}
+		.invisible {display : none}
+	</style>
+	<script type='text/javascript'>
+		function aperçu(){
+			texte=document.getElementById('mon_texte').value;
+			document.getElementById('ma_zone').innerText=`Texte à copier : ${texte}. Ça te va ?`;
+		}
+		function copier(){
+			texte=document.getElementById('mon_texte').value;
+			document.getElementById('ma_zone').innerText=texte;
+			c=True;
+		}
+		function normal(){
+			document.getElementById('ma_zone').innerText='Voici du contenu';
+		}
+
+		function changerCouleur(couleur){
+			document.getElementById('mon_texte').style.backgroundColor=couleur;
+		}
+
+		function cacher(){
+			document.getElementById('ma_zone2').className='invisible'
+			document.getElementById('btn4').className='visible'
+			document.getElementById('btn3').className='invisible'
+			
+		}
+		function afficher(){
+			document.getElementById('ma_zone2').className='visible'
+			document.getElementById('btn3').className='visible'
+			document.getElementById('btn4').className='invisible'
+		}
+	</script>
+	
+</head>
+
+<body>
+	<input id="mon_texte" type="text" value="toto"/><br/>
+	
+	<p id="ma_zone">Voici du contenu</p><br/>
+	<button type="button" id="btn1"  onmouseover="aperçu()" onclick="copier()" onmouseout="normal()">Copier</button><br/>
+	<button type="button" id="btn2" onmouseover="changerCouleur('#FF8080')" onclick="changerCouleur('#80FF80')" onmouseout="changerCouleur('#FFFFFF')">Changer couleur</button><br/>
+	
+	<p id="ma_zone2" class="visible">On va cacher ça !</p><br/>
+	<button type="button" id="btn3" class="visible" onclick="cacher()">Cacher</button>
+	<button type="button" id="btn4" class="invisible" onclick="afficher()">Afficher</button><br/>
+</body>
+	
+</html>
